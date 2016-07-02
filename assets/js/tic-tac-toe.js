@@ -11,6 +11,7 @@ $(function() {
     var square = $(this).closest('.square');
     $('#game-reads .current-square').text('on ' + $(square).find('label').clone().find('span').remove().end().text().slice(0, -1).toLowerCase());
   }).on("change", function() {
+    $(this).focus();
     $(this).prop('disabled', true);
     var square = $(this).closest('.square');
     if ($(square).hasClass("empty")) {
