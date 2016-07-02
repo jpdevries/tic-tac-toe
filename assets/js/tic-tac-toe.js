@@ -52,6 +52,7 @@ $(function() {
 
   $('#tic-tac-form').on('reset',function(e){
     updateBoardReads();
+    $('.square input').prop('disabled',false);
   });
 
   function updateBoardReads() {
@@ -93,6 +94,7 @@ $(function() {
 
     if (won) {
       turn = 0;
+      $('.square input').prop('disabled',false);
       if (xo == "X") {
         $('#tic-tac-form')[0].reset();
         updateBoardReads();
