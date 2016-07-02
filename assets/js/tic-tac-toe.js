@@ -20,7 +20,7 @@ $(function() {
         $(square).attr("data-check", "X");
         $(this).val("X");
         $(this).closest('td').find('label span').text("X");
-        $('#game-reads .whos-turn').text('Player 1');
+        $('#game-reads .whos-turn').text('Player 2');
         document.title = "Tic&–Tac–Toe Player 1 (X)";
         check("X");
         turn += 1;
@@ -35,7 +35,7 @@ $(function() {
         $(square).attr("data-check", "O");
         $(this).val("O");
         $(this).closest('td').find('label span').text("O");
-        $('#game-reads .whos-turn').text('Player 2');
+        $('#game-reads .whos-turn').text('Player 1');
         document.title = "Tic&–Tac–Toe Player 2 (O)";
         check("O");
         turn += 1;
@@ -54,60 +54,59 @@ $(function() {
     updateBoardReads();
   });
 
+  function updateBoardReads() {
+    $('.board-reads').html(
+      jQuery.map($('.square'), function(n, i) {
+        return $('<span>').text($(n).find('label').text() + '. ');
+      })
+    );
+  }
 
-});
+  function check(xo) {
+    var answers = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [6, 4, 2]
+    ];
 
-function updateBoardReads() {
-  $('.board-reads').html(
-    jQuery.map($('.square'), function(n, i) {
-      return $('<span>').text($(n).find('label').text() + '. ');
-    })
-  );
-}
+    var won = false;
+    var userMoves = [];
 
-function check(xo) {
-  var answers = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [6, 4, 2]
-  ];
+    for (var i = 0; i < answers.length; i += 1) {
+      for (var j = 0; j < answers[i].length; j += 1) {
+        if ($(".square").eq(answers[i][j]).attr("data-check") === xo) {
+          userMoves.push(answers[i][j]);
+        }
+      }
 
-  var won = false;
-  var userMoves = [];
-
-  for (var i = 0; i < answers.length; i += 1) {
-    for (var j = 0; j < answers[i].length; j += 1) {
-      if ($(".square").eq(answers[i][j]).attr("data-check") === xo) {
-        userMoves.push(answers[i][j]);
+      if (userMoves.length === 3) {
+        won = true;
+      } else {
+        userMoves = [];
       }
     }
 
-    if (userMoves.length === 3) {
-      won = true;
-    } else {
-      userMoves = [];
+    if (won) {
+      turn = 0;
+      if (xo == "X") {
+        $('#tic-tac-form')[0].reset();
+        updateBoardReads();
+        setTimeout(function(){ // make sure this happens after the boards are updated
+          $('.messages').html("<p>Player 1 wins</p>");
+        },0);
+      } else {
+        $('#tic-tac-form')[0].reset();
+        updateBoardReads();
+        setTimeout(function(){ // make sure this happens after the boards are updated
+          $('.messages').html("<p>Player 2 wins</p>");
+        },0);
+      }
     }
   }
 
-  if (won) {
-    if (xo == "X") {
-      setTimeout(function() { // prevents a weird glitch where the last x or o doesn't show until the alert is dismissed
-        alert("Player 1 wins");
-      }, 0);
-      $('#tic-tac-form')[0].reset();
-      updateBoardReads();
-    } else {
-      setTimeout(function() {
-        alert("Player 2 wins");
-      }, 0);
-      $('#tic-tac-form')[0].reset();
-      updateBoardReads();
-    }
-
-  }
-}
+});
