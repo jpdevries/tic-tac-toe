@@ -28,6 +28,8 @@ This projects makes use of:
 ## Progressive Enhancement
 The `<noscript>` tag is used to remind users to enable JavaScript for the game. Since the game is enhanced from a semantic `<form>`, the game could technically be played through syncrounous form submissions however that is not demonstrated&nbsp;here.
 
+![](http://f.cl.ly/items/1Z0R463M1y1v3e2Y3013/Screen%20Shot%202016-07-03%20at%201.21.29%20AM.png)
+
 ## Accessibility Proclaimer
 This component strives for WCAG 2.0 Guidelines Level AA. Please [open an issue](https://github.com/jpdevries/availability-grid/issues/new) for any accessibility issue, feedback, or&nbsp;concern.
 
