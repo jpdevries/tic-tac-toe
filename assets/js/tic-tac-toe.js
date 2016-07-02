@@ -21,6 +21,7 @@ $(function() {
         $(this).val("X");
         $(this).closest('td').find('label span').text("X");
         $('#game-reads .whos-turn').text('Player 1');
+        document.title = "Tic&–Tac–Toe Player 1 (X)";
         check("X");
         turn += 1;
         if (turn === 9) {
@@ -35,6 +36,7 @@ $(function() {
         $(this).val("O");
         $(this).closest('td').find('label span').text("O");
         $('#game-reads .whos-turn').text('Player 2');
+        document.title = "Tic&–Tac–Toe Player 2 (O)";
         check("O");
         turn += 1;
         if (turn === 9) {
