@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-3-1: Tic-Tac-Toe</title>
+	<link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+	<main>
+		<form id="tic-tac-form">
+			<table>
+				<caption><h1><noscript>Please Enable JavaScript to </noscript>Play Tic&ndash;Tac&ndash;Toe with a Friend</h1></caption>
+				<tbody>
+					<tr>
+						<td class="empty square">
+							<label for="row-one-col-one">Row one column one <span>unplayed</span></label>
+							<input type="checkbox" name="row-one-col-one" aria-describedby="console"  />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-one-col-two" >Row one column two <span>unplayed</span></label>
+							<input type="checkbox" name="row-one-col-two" aria-describedby="console" />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-one-col-three" >Row one column three <span>unplayed</span></label>
+							<input type="checkbox" name="row-one-col-three" aria-describedby="console" />
+							 <span></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="empty square">
+							<label for="row-two-col-one" >Row two column one <span>unplayed</span></label>
+							<input type="checkbox" name="row-two-col-one" aria-describedby="console" />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-two-col-two" >Row two column two <span>unplayed</span></label>
+							<input type="checkbox" name="row-two-col-two" aria-describedby="console" />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-two-col-three" >Row two column three <span>unplayed</span></label>
+							<input type="checkbox" name="row-two-col-three" aria-describedby="console" />
+							 <span></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="empty square">
+							<label for="row-three-col-one" >Row three column one <span>unplayed</span></label>
+							<input type="checkbox" name="row-three-col-one" aria-describedby="console" />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-three-col-two" >Row three column two <span>unplayed</span></label>
+							<input type="checkbox" name="row-three-col-two" aria-describedby="console" />
+							 <span></span>
+						</td>
+						<td class="empty square">
+							<label for="row-three-col-three" >Row three column three <span>unplayed</span></label>
+							<input type="checkbox" name="row-three-col-three" aria-describedby="console" />
+							 <span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<footer id="console">
+				<div class="messages"><p>Player 1's turn (X)</p></div>
+				<aside id="game-reads" style="display:none">
+					<p>
+						<span>Player 1 is X. Player 2 is O. </span>
+						<span class="whos-turn">Player 1</span> is currently <span class="current-square">not on a square</span>.
+					</p>
+					<p>
+						From the upper left the board reads as follows:
+						<span class="board-reads">
+
+						</span>
+					</p>
+				</aside>
+				<button type="reset">Reset</button>
+			</footer>
+		</form>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+	<script src="assets/js/tic-tac-toe.js"></script>
+
+</body>
+</html>

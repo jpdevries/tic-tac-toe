@@ -1,0 +1,140 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  padding-bottom:2em;
+}
+
+.wrapper {
+display: inline-block;
+}
+
+#tic-tac-form, #console {
+  text-align:center;
+}
+
+table, .messages {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+
+.messages {
+  padding:0 1em;
+}
+
+label, .visually-hidden { /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+table, .table {
+  display:table;
+  width: 50%;
+  border:1px solid #000;
+}
+
+table td {
+  position:relative;
+}
+
+table input[type="checkbox"] {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+  position:absolute;
+  background:transparent;
+  cursor:pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  z-index:99999;
+}
+
+table input[type="checkbox"] + span {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  cursor:pointer;
+}
+
+table input[type="checkbox"]:focus + span {
+  box-shadow: 0 0 5px #51cbee;
+    border: 1px solid #51cbee;
+}
+
+table input[type="checkbox"] + span:after {
+  display:block;
+  position:absolute;
+  top:50%;
+  margin-top:-.5em;
+  left:0;
+  right:0;
+}
+
+table td[data-check="X"] input[type="checkbox"]:checked + span:after {
+  content:"X";
+}
+
+table td[data-check="O"] input[type="checkbox"]:checked + span:after {
+  content:"O";
+}
+
+table input[type="checkbox"]:checked + span {
+
+}
+
+tr {
+    display:table-row;
+    height:100%;
+}
+
+.messages {
+border: double;
+width: 50%;
+}
+
+
+#console {
+position: relative;
+
+top: 10px;
+z-index: 1001;
+}
+
+button[type="reset"] {
+background-color: #333333;
+text-align: center;
+color: white;
+	font-family: Arial, sans-serif;
+padding: 5px;
+border-radius: 10px;
+margin: 5px 0;
+width: 49%;
+cursor: pointer;
+}
+
+
+.square {
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	font-size: 36px;
+	vertical-align: middle;
+    display:table-cell;
+    width:33%;
+    height:100px;
+    border:1px solid #CCC;
+}
