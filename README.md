@@ -6,7 +6,7 @@ Tic-Tac-Toe in HTML5. Keyboard and Screen Reader Accessible.
 
 
 ## Keyboard Accessible
-Implicit keyboard accessible is provided by the use of the `<input type="checkbox">` element. Each cell of the game board is a custom styled `<input type="checkbox">` and recieved keyboard focused, can be tabbed through, and checked using the spacebar&nbsp;key.
+Implicit keyboard accessible is provided by the use of the `<input type="checkbox">` element. Each cell of the game board is a custom styled `<input type="checkbox">` and recieves keyboard focus, can be tabbed through, and checked using the spacebar&nbsp;key.
 ![](http://j4p.us/290F360Q1E2T/Screen%20Shot%202016-07-03%20at%201.07.51%20AM.png)
 
 ## Screen Reader Support
