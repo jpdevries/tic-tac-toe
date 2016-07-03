@@ -15,7 +15,7 @@ Forcefully hidden (`display:none`) text along with `aria-describedby` is used to
 ![](http://j4p.us/0Q3340090g3Z/Screen%20Shot%202016-07-03%20at%201.18.17%20AM.png)
 ![](http://j4p.us/0c0n1P302W0C/Screen%20Shot%202016-07-03%20at%201.20.26%20AM.png)
 
-## ARIA Roles
+## ARIA
 This projects makes use of:
 
  - `aria-describedby`
