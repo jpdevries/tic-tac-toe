@@ -34,6 +34,6 @@ The `<noscript>` tag is used to remind users to enable JavaScript for the game. 
  - [VoiceOver Demo](https://vimeo.com/173196688)
 
 ## Accessibility Proclaimer
-This component strives for WCAG 2.0 Guidelines Level AA. Please [open an issue](https://github.com/jpdevries/availability-grid/issues/new) for any accessibility issue, feedback, or&nbsp;concern.
+This component strives for WCAG 2.0 Guidelines Level AA. Please [open an issue](https://github.com/jpdevries/tic-tac-toe/issues/new) for any accessibility issue, feedback, or&nbsp;concern.
 
 
