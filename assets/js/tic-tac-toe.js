@@ -22,8 +22,8 @@ $(function() {
         $(this).closest('td').find('label span').text("X");
         $('#game-reads .whos-turn').text('Player 2');
         document.title = "Tic–Tac–Toe Player 1 (X)";
-        check("X");
         turn += 1;
+        check("X");
         if (turn === 9) {
           alert("no one wins;");
           location.reload();
@@ -37,8 +37,8 @@ $(function() {
         $(this).closest('td').find('label span').text("O");
         $('#game-reads .whos-turn').text('Player 1');
         document.title = "Tic–Tac–Toe Player 2 (O)";
-        check("O");
         turn += 1;
+        check("O");
         if (turn === 9) {
           alert("no one wins;");
           location.reload();
@@ -94,7 +94,8 @@ $(function() {
 
     if (won) {
       turn = 0;
-      $('.square input').prop('disabled',false);
+      $('.square').removeAttr('data-check').addClass('empty');
+      $('.square input').prop('disabled',false).removeAttr('value').prop('checked', false).siblings('label').children('span').text('unplayed');
       if (xo == "X") {
         $('#tic-tac-form')[0].reset();
         updateBoardReads();
